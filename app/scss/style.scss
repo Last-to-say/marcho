@@ -4,7 +4,91 @@
 @import 'global';
 @import 'libs';
 
+.header{
 
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .menu{
+    &__list{
+      display: flex;
+      text-transform: uppercase;
+    }
+
+    &__list-item:not(:last-child){
+      margin-right: 35px;
+    }
+
+    &__list-link{
+      @extend %roboto-400;
+      color: $defaultDark;
+      padding-bottom: 5px;
+    }
+
+    &__list-link:hover{
+      color: $accentRed;
+      @extend %roboto-700;
+      border-bottom: 1px solid $accentRed;
+    }
+
+    &__list-link--active{
+      @extend %roboto-700;
+      color: $accentRed;
+      border-bottom: 1px solid $accentRed;
+    }
+  }
+
+  .user-nav{
+    display: flex;
+
+    &__link{
+      width: 22px;
+      height: 22px;
+      @extend %img;
+      position: relative;
+    }
+
+    &__link--user{
+      background-image: url(../images/icons/user.png);
+    }
+
+    &__link--search{
+      background-image: url(../images/icons/search.png);
+    }
+
+    &__link--favourite{
+      background-image: url(../images/icons/heart_icon.png);
+    }
+
+    &__link--cart{
+      background-image: url(../images/icons/cart_icon.png);
+    }
+
+    &__link:not(:last-child){
+      margin-right: 25px; 
+    }
+
+    &__num{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-size: 12px;
+      @extend %quicksand-500;
+      color: #fff;
+      background-color: #fe3e57;
+    }
+  }
+}
 
 
 @import 'media';
