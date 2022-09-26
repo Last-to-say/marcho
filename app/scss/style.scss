@@ -4,75 +4,75 @@
 @import 'global';
 @import 'libs';
 
-.header{
+.header {
 
-  &__content{
+  &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
   }
 
-  .menu{
-    &__list{
+  .menu {
+    &__list {
       display: flex;
       text-transform: uppercase;
     }
 
-    &__list-item:not(:last-child){
+    &__list-item:not(:last-child) {
       margin-right: 35px;
     }
 
-    &__list-link{
+    &__list-link {
       @extend %roboto-400;
       color: $defaultDark;
       padding-bottom: 5px;
     }
 
-    &__list-link:hover{
+    &__list-link:hover {
       color: $accentRed;
       @extend %roboto-700;
       border-bottom: 1px solid $accentRed;
     }
 
-    &__list-link--active{
+    &__list-link--active {
       @extend %roboto-700;
       color: $accentRed;
       border-bottom: 1px solid $accentRed;
     }
   }
 
-  .user-nav{
+  .user-nav {
     display: flex;
 
-    &__link{
+    &__link {
       width: 22px;
       height: 22px;
       @extend %img;
       position: relative;
     }
 
-    &__link--user{
+    &__link--user {
       background-image: url(../images/icons/user.png);
     }
 
-    &__link--search{
+    &__link--search {
       background-image: url(../images/icons/search.png);
     }
 
-    &__link--favourite{
+    &__link--favourite {
       background-image: url(../images/icons/heart_icon.png);
     }
 
-    &__link--cart{
+    &__link--cart {
       background-image: url(../images/icons/cart_icon.png);
     }
 
-    &__link:not(:last-child){
-      margin-right: 25px; 
+    &__link:not(:last-child) {
+      margin-right: 25px;
     }
 
-    &__num{
+    &__num {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -87,6 +87,121 @@
       color: #fff;
       background-color: #fe3e57;
     }
+  }
+}
+
+.footer {
+  color: $accentGrey;
+  @extend %quicksand-500;
+  background-color: #f6f6f6;
+
+  a{
+    color: $accentGrey;
+    @extend %quicksand-500;
+  }
+
+  .footer__top{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 35px;
+    border-bottom: 1px solid #ececec;
+  }
+  
+  .logo-link {
+    margin-bottom: 30px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+  }
+
+  &__address,
+  .footer__email{
+    margin-bottom: 15px;
+  }
+
+  &__phone{
+    margin-bottom: 20px;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item:not(:last-child){
+    margin-right: 15px;
+  }
+
+  &__social-item:hover{
+    svg{
+      fill: $accentRed;
+    }
+  }
+
+  svg{
+    fill: $accentGrey;
+  }
+
+  &__top-list{
+    max-width: 155px;
+  }
+
+  &__top-title{
+    font-size: 22px;
+    @extend %roboto-500;
+    color: $defaultDark;
+    margin-bottom: 29px;
+  }
+
+  &__top-item:not(:last-child){
+    margin-bottom: 15px;
+  }
+
+  &__top-newslatter{
+    max-width: 475px
+  }
+
+  &__top-text{
+    margin-bottom: 30px;
+  }
+
+  &__top-button{
+    padding: 15px;
+    background-color: $accentRed;
+    @extend %roboto-400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  }
+
+  &__top-input{
+    padding: 12px;
+    width: 320px;
+    border: none;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+  }
+
+  &__top-input::placeholder{
+    color: $accentGrey;
+  }
+
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  &__bottom-accept{
+    display: flex;
+  }
+
+  &__bottom-text,
+  .footer__bottom-img:not(:last-child){
+    margin-right: 20px;
   }
 }
 
