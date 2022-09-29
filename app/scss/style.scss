@@ -181,14 +181,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   position: relative;
+  margin-bottom: 115px;
 
   &::before,
-  &::after{
+  &::after {
     content: '';
     position: absolute;
   }
 
-  &::after{
+  &::after {
     top: -50px;
     left: -50px;
     background-image: url(../images/categories/decor/circle.png);
@@ -197,7 +198,7 @@
     z-index: -1;
   }
 
-  &::before{
+  &::before {
     bottom: -20px;
     right: -20px;
     background-image: url(../images/categories/decor/triangle.png);
@@ -225,6 +226,94 @@
   &__content {
     @extend %quicksand-500;
     color: $accentGrey;
+  }
+}
+
+.categories {
+  text-align: center;
+  background-image: url(../images/categories/decor/shapes.png);
+  @extend %img;
+  background-size: contain;
+
+  &__description {
+    @extend %quicksand-500;
+    max-width: 540px;
+    margin: 0 auto 60px;
+    color: $accentGrey;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    min-height: 640px;
+    text-align: left;
+  }
+
+  &__item {
+    @extend %img;
+    padding: 40px 0 0 40px;
+
+    &:nth-child(1) {
+      grid-row: span 2;
+
+      .categories__offer,
+      .categories__link:hover {
+        color: #c4abeb;
+        border-color: #c4abeb;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: span 2;
+
+      .categories__offer {
+        color: $accentRed;
+      }
+    }
+
+    &:nth-child(3) {
+
+      .categories__offer,
+      .categories__link:hover {
+        color: #ffb534;
+        border-color: #ffb534;
+      }
+    }
+
+    &:nth-child(4) {
+
+      .categories__offer,
+      .categories__link:hover {
+        color: #a7d9f5;
+        border-color: #a7d9f5;
+      }
+    }
+  }
+
+  &__offer {
+    @extend %quicksand-500;
+    margin-bottom: 10px;
+  }
+
+  &__type {
+    @extend %roboto-500;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $defaultDark;
+    @extend %roboto-400;
+    transition: color 0.3s;
+  }
+
+  &__link:hover {
+    color: $accentRed;
+    border-bottom: 1px solid $accentRed;
+    padding-bottom: 5px;
   }
 }
 
