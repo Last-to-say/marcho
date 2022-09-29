@@ -90,23 +90,161 @@
   }
 }
 
+.slider {
+  background-color: $backgroungGrey;
+  background-image: url(../images/slider/sliderDecoration.png);
+  @extend %img;
+  background-size: contain;
+
+  &__item-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    position: relative;
+  }
+
+  &__content {
+    align-self: center;
+    max-width: 540px;
+  }
+
+  &__title {
+    font-size: 55px;
+    margin-bottom: 15px;
+  }
+
+  &__title-span {
+    display: block;
+  }
+
+  &__text {
+    @extend %quicksand-500;
+    color: $accentGrey;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    padding: 15px 45px;
+    margin: auto;
+  }
+
+  &__banner {
+    width: 45%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    display: flex;
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    button {
+      font-size: 0;
+      padding: 0;
+      height: 6px;
+      width: 6px;
+      background: $accentGrey;
+      border-radius: 50%;
+    }
+
+    .slick-active {
+      button {
+        position: relative;
+        height: 30px;
+        width: 30px;
+        border: 1px solid $accentRed;
+        background: transparent;
+      }
+
+      button:after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        background: $accentRed;
+        border-radius: 50%;
+        left: 11px;
+        top: 10px;
+      }
+    }
+
+  }
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  position: relative;
+
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+  }
+
+  &::after{
+    top: -50px;
+    left: -50px;
+    background-image: url(../images/categories/decor/circle.png);
+    width: 120px;
+    height: 120px;
+    z-index: -1;
+  }
+
+  &::before{
+    bottom: -20px;
+    right: -20px;
+    background-image: url(../images/categories/decor/triangle.png);
+    width: 65px;
+    height: 52px;
+    z-index: -1;
+  }
+
+  &__item {
+    padding: 60px 40px;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    background: #fff;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    @extend %quicksand-500;
+    color: $accentGrey;
+  }
+}
+
 .footer {
   color: $accentGrey;
   @extend %quicksand-500;
   background-color: #f6f6f6;
 
-  a{
+  a {
     color: $accentGrey;
     @extend %quicksand-500;
   }
 
-  .footer__top{
+  .footer__top {
     display: flex;
     justify-content: space-between;
     padding: 70px 0 35px;
     border-bottom: 1px solid #ececec;
   }
-  
+
   .logo-link {
     margin-bottom: 30px;
   }
@@ -118,11 +256,11 @@
   }
 
   &__address,
-  .footer__email{
+  .footer__email {
     margin-bottom: 15px;
   }
 
-  &__phone{
+  &__phone {
     margin-bottom: 20px;
   }
 
@@ -130,77 +268,71 @@
     display: flex;
   }
 
-  &__social-item:not(:last-child){
+  &__social-item:not(:last-child) {
     margin-right: 15px;
   }
 
-  &__social-item:hover{
-    svg{
+  &__social-item:hover {
+    svg {
       fill: $accentRed;
     }
   }
 
-  svg{
+  svg {
     fill: $accentGrey;
   }
 
-  &__top-list{
+  &__top-list {
     max-width: 155px;
   }
 
-  &__top-title{
+  &__top-title {
     font-size: 22px;
     @extend %roboto-500;
     color: $defaultDark;
     margin-bottom: 29px;
   }
 
-  &__top-item:not(:last-child){
+  &__top-item:not(:last-child) {
     margin-bottom: 15px;
   }
 
-  &__top-newslatter{
+  &__top-newslatter {
     max-width: 475px
   }
 
-  &__top-text{
+  &__top-text {
     margin-bottom: 30px;
   }
 
-  &__top-button{
+  &__top-input {
     padding: 15px;
-    background-color: $accentRed;
-    @extend %roboto-400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-  }
-
-  &__top-input{
-    padding: 12px;
     width: 320px;
     border: none;
     box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
   }
 
-  &__top-input::placeholder{
+  &__top-input::placeholder {
     color: $accentGrey;
   }
 
-  &__bottom{
+  &__top-btn {
+    display: inline-block;
+  }
+
+  &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
   }
 
-  &__bottom-accept{
+  &__bottom-accept {
     display: flex;
   }
 
   &__bottom-text,
-  .footer__bottom-img:not(:last-child){
+  .footer__bottom-img:not(:last-child) {
     margin-right: 20px;
   }
 }

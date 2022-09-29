@@ -13,13 +13,27 @@ body {
   @extend %roboto-700
 }
 
-main{
+main {
   flex-grow: 1;
 }
 
-.container{
+.container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+.button {
+  display: block;
+  padding: 15px;
+  background-color: $accentRed;
+  @extend %roboto-400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+}
+
+section{
+  margin-bottom: 110px;
+}
