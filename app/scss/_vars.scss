@@ -35,6 +35,15 @@ $backgroungGrey: #f6f6f6;
 
 %img{
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+}
+
+//fancybox fix
+
+@function max($numbers...){
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...){
+  @return m#{i}n(#{$numbers});
 }

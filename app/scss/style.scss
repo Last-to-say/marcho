@@ -118,8 +118,6 @@
   }
 
   &__text {
-    @extend %quicksand-500;
-    color: $accentGrey;
     margin-bottom: 50px;
   }
 
@@ -182,6 +180,7 @@
   grid-column-gap: 30px;
   position: relative;
   margin-bottom: 115px;
+  text-align: left;
 
   &::before,
   &::after {
@@ -222,11 +221,6 @@
     font-size: 22px;
     margin-bottom: 15px;
   }
-
-  &__content {
-    @extend %quicksand-500;
-    color: $accentGrey;
-  }
 }
 
 .categories {
@@ -235,11 +229,9 @@
   @extend %img;
   background-size: contain;
 
-  &__description {
-    @extend %quicksand-500;
+  &__text {
     max-width: 540px;
     margin: 0 auto 60px;
-    color: $accentGrey;
   }
 
   &__list {
@@ -314,6 +306,56 @@
     color: $accentRed;
     border-bottom: 1px solid $accentRed;
     padding-bottom: 5px;
+  }
+}
+
+.promo {
+  background-image: url(../images/promo/sectionBg.png) ;
+  @extend %img;
+  padding: 125px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/promo/background.jpg);
+    @extend %img;
+    width: 535px;
+    height: 480px;
+    margin-right: 40px;
+  }
+
+  &__link-btn{
+    max-width: 130px;
+    width: 100%;
+    max-height: 130px;
+  }
+
+  &__content{
+    max-width: 565px;
+  }
+
+  &__offer {
+    @extend %quicksand-500;
+    font-size: 22px;
+    color: $accentRed;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    padding: 15px 40px;
   }
 }
 
