@@ -9,5 +9,11 @@ $(function(){
     autoplaySpeed: 5000
   });
 
+  $('.products__star-rate').rateYo({
+    starWidth: "17px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true,
+  });
 
 });
