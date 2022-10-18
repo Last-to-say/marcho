@@ -475,19 +475,78 @@
     text-decoration: line-through;
   }
 
-  &__link {
-    display: inline-flex;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: $defaultDark;
-    @extend %roboto-400;
-    border: 1px solid $accentRed;
-    padding: 15px 30px;
+
+
+  &__star-rate {
+    margin: 0 auto 20px;
+  }
+}
+
+.day-deal {
+  background: url(../images/dayDeal/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  
+
+  &__inner {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 0 115px auto;
+    padding: 150px 0;
   }
 
-  &__star-rate{
-    margin: 0 auto 20px;
+  &__text {
+    font-size: 18px;
+    text-transform: uppercase;
+    @extend %quicksand-500;
+    color: $accentRed;
+    margin-bottom: 5px;
+  }
+
+  &__clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  &__clock-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  &__smalltext{
+    @extend %quicksand-500;
+    font-size: 16px;
+    color: $accentGrey;
+  }
+
+  &__clock-item:not(:last-child){
+    margin-right: 30px;
+  }
+
+  &__link {
+    padding: 10px 30px;
+  }
+}
+
+.sponsors{
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 

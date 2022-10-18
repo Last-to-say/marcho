@@ -48,3 +48,15 @@ section {
   @extend %quicksand-500;
   color: $accentGrey;
 }
+
+.section-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: $defaultDark;
+  @extend %roboto-400;
+  border: 1px solid $accentRed;
+  padding: 15px 30px;
+}
