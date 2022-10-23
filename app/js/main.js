@@ -16,6 +16,22 @@ $(function(){
     readOnly: true,
   });
 
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+    min: 0,
+    max: 1000,
+    from: 200,
+    to: 800,
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
+
   //timer
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());

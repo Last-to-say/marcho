@@ -61,6 +61,23 @@ section {
   padding: 15px 30px;
 }
 
-.header--404-error{
+.header--404-error {
   background-color: $backgroungGrey;
+}
+
+
+.filter {
+  &-item {
+    padding: 40px 30px;
+    border: 1px solid #ececec;
+    max-width: 370px;
+    margin: 0 30px 40px 0;
+  }
+
+  &-title{
+    @extend %roboto-400;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
 }
