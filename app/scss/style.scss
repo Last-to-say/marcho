@@ -933,11 +933,72 @@
     display: none;
   }
 
-  .irs--flat .irs-from, 
-  .irs--flat .irs-to, 
-  .irs--flat .irs-single{
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
     display: none;
-  } 
+  }
+}
+
+.filter-color {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__item:not(:first-child) {
+    padding-top: 20px;
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked+.filter-color__checkbox {
+      background-image: url(../images/icons/checked.svg);
+      @extend %img;
+    }
+  }
+
+  &__checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__checkbox--blue {
+    background: #00aeef;
+  }
+
+  &__checkbox--red {
+    background: #f52574;
+  }
+
+  &__checkbox--green {
+    background: #24d4ac;
+  }
+
+  &__checkbox--orange {
+    background: #ff7e00;
+  }
+
+  &__checkbox--gray {
+    background: #c7c2c2;
+  }
+
+  &__checkbox--purple {
+    background: #923899;
+  }
+
 }
 
 
