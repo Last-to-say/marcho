@@ -957,12 +957,6 @@
   }
 
   &__input {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    position: absolute;
-
     &:checked+.filter-color__checkbox {
       background-image: url(../images/icons/checked.svg);
       @extend %img;
@@ -999,6 +993,39 @@
     background: #923899;
   }
 
+}
+
+.filter-size{
+  &__label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__label:not(:last-child){
+    margin-bottom: 20px;
+  }
+
+  &__input{
+    &:checked + .filter-size__checkbox {
+      background-image: url(../images/icons/checkedRed.svg);
+      @extend %img;
+      border-color: #fe6579;
+    }
+    &:checked + .filter-size__checkbox + .filter-size__text{
+      color: #fe6579;
+    }
+  }
+
+  &__checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #959595;
+    margin-right: 15px;
+  }
 }
 
 

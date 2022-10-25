@@ -74,10 +74,18 @@ section {
     margin: 0 30px 40px 0;
   }
 
-  &-title{
+  &-title {
     @extend %roboto-400;
     font-size: 22px;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
+}
+
+.input-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
