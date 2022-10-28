@@ -1,5 +1,6 @@
 $(function(){
   
+  // $('.select-style').styler();
   
   $('.slider__inner').slick({
     arrows: false, 
