@@ -38,6 +38,7 @@ function scripts() {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/Number-Input-Spinner-jQuery-Nice-Number/dist/jquery.nice-number.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

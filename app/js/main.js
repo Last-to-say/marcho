@@ -1,5 +1,9 @@
 $(function(){
   
+  $('.commodity-form__count-input').niceNumber({
+
+  });
+  
   $('.catalog-view__btn').on('click', function(){
     $('.catalog-view__btn').removeClass('catalog-view__btn--active');
     $(this).addClass('catalog-view__btn--active');
@@ -19,6 +23,21 @@ $(function(){
     fade: true,
     autoplay: true,
     autoplaySpeed: 5000
+  });
+
+  $('.commodity-slide__small').slick({
+    asNavFor: '.commodity-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.commodity-slide__big').slick({
+    asNavFor: '.commodity-slide__small',
+    draggable: false,
+    arrows: false,
+    fade: true,
   });
 
   $('.products-rate').rateYo({
