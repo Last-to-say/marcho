@@ -1,4 +1,13 @@
 $(function(){
+
+  $('.tabs__top-link').on('click', function(e){
+    e.preventDefault();
+    $('.tabs__top-link').removeClass('tabs__top-link--active');
+    $(this).addClass('tabs__top-link--active');
+
+    $('.tabs__content-item').removeClass('tabs__content-item--active');
+    $($(this).attr('href')).addClass('tabs__content-item--active');
+  });
   
   $('.commodity-form__count-input').niceNumber({
 
