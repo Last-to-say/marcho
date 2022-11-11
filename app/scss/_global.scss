@@ -26,11 +26,16 @@ main {
 .button {
   display: block;
   padding: 15px;
-  background-color: $accentRed;
+  background: $defaultDark;;
   @extend %roboto-400;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #fff;
+  transition: box-shadow 1s, background 0.5s;
+
+
+}.button:hover {
+  background: $accentRed;
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
 
