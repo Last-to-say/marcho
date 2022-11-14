@@ -124,4 +124,6 @@ $(function(){
   const deadline = $('.day-deal__clock').attr('data-time');
   initializeClock('day-deal__clock', deadline);
 
+  
+
 });
