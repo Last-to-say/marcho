@@ -1,0 +1,19 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+@import '../module/_header/_header';
+@import '../module/_footer/_footer';
+@import '../module/_reusible/social';
+@import '../module/_reusible/breadcrumb';
+@import '../module/_pageNavigation/pageNavigation';
+@import '../module/_commodity/commodity';
+@import '../module/_tabs/tabs';
+@import '../module/_related/related';
+@import '../module/_reusible/products';
+
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../../node_modules/Number-Input-Spinner-jQuery-Nice-Number/dist/jquery.nice-number';

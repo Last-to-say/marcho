@@ -1,0 +1,17 @@
+.page-navigation {
+  max-width: 1700px;
+  margin: 0 auto 110px;
+  @extend %img;
+
+  &__inner {
+    padding: 135px 0;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %roboto-400;
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+}

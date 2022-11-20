@@ -1,0 +1,375 @@
+.blog-page {
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 770px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__item {
+    transition: box-shadow 0.7s;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__item:hover {
+    box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+
+    .blog-page__content-link {
+      color: $accentRed;
+    }
+  }
+
+  &__item-img {
+    max-width: 770px;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 770px;
+    height: 450px;
+    background-image: url(../images/blog/2page.jpg);
+    @extend %img;
+  }
+
+  &__content-box {
+    padding: 40px;
+    border: 1px solid $backgroungGrey;
+  }
+
+  &__content-title {
+    @extend %roboto-500;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  &__content-link {
+    color: $defaultDark;
+    transition: color 0.7s;
+  }
+
+  &__item-slider {
+    position: relative;
+
+    .slick-arrow {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+
+      path {
+        fill: $accentRed;
+      }
+    }
+
+    .slick-disabled {
+      background: $accentRed;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    .slick-prev {
+      left: 40px;
+    }
+
+    .slick-next {
+      right: 40px;
+    }
+
+
+  }
+
+  .blog-info {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+
+    &__author {
+      margin-right: 30px;
+    }
+  }
+
+  .founder {
+    border: 1px solid #ececec;
+    margin-bottom: 50px;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 370px;
+
+    &__img {
+      margin: 0 auto 25px;
+      max-width: 160px;
+      height: 160px;
+    }
+
+    &__name {
+      @extend %roboto-700;
+      color: $defaultDark;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    &__position {
+      @extend %quicksand-500;
+      color: $accentRed;
+      margin-bottom: 25px;
+    }
+
+    &__info {
+      margin-bottom: 30px;
+    }
+
+    .social-founder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .latest {
+    border: 1px solid #ececec;
+    margin-bottom: 50px;
+    padding: 40px 30px;
+    @extend %roboto-400;
+    max-width: 370px;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin-bottom: 35px;
+    }
+
+    &__item {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ececec;
+    }
+
+    &__topic-link {
+      display: block;
+      min-width: 80px;
+      margin-right: 20px;
+    }
+
+    &__topic-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+
+    &__info-text {
+      margin-bottom: 13px;
+      color: $defaultDark;
+    }
+
+    &__info-date {
+      position: relative;
+      color: $accentGrey;
+      padding-left: 25px;
+    }
+
+    &__info-date::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/icons/calendar.svg);
+      @extend %img;
+    }
+
+  }
+
+  .filter-item {
+    margin: 0 0 40px 0;
+  }
+
+  .filter-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.user-blog {
+
+  &__content {
+    h3 {
+      @extend %roboto-500;
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      @extend %quicksand-500;
+      color: $accentGrey;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    blockquote {
+      border-left: 3px solid $accentRed;
+      padding: 35px;
+      @extend %roboto-400;
+      font-size: 18px;
+      margin-bottom: 35px;
+      background: $backgroungGrey;
+    }
+  }
+
+  &__img {
+    max-width: 770px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &-link {
+      padding-left: 25px;
+      position: relative;
+      color: $accentGrey;
+      @extend %quicksand-500;
+    }
+
+    &-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      @extend %img;
+    }
+
+    &-link--date::before {
+      background-image: url(../images/icons/calendar.svg);
+    }
+
+    &-link--comment::before {
+      background-image: url(../images/icons/comment.svg);
+    }
+
+    &-link--author::before {
+      background-image: url(../images/icons/userRed.svg);
+    }
+  }
+
+  &__text {
+    border: 1px solid #ececec;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__content-img--left {
+    float: left;
+    margin: 0 30px 5px 0;
+  }
+
+  &__content-img--right {
+    float: right;
+    margin: 0 0 5px 30px;
+  }
+
+  .bond {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 30px;
+
+    &__tags {
+      display: flex;
+      align-items: center;
+    }
+
+    &__subtitle {
+      text-transform: uppercase;
+      margin-right: 10px;
+      @extend %roboto-500;
+    }
+
+    &__tags-link {
+      padding-bottom: 2px;
+      @extend %quicksand-500;
+      color: $accentGrey;
+    }
+
+    &__tags-link:not(:last-child) {
+      margin-right: 10px;
+    }
+
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+
+    &-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      margin-right: 30px;
+    }
+
+    &-text {
+      @extend %quicksand-500;
+    }
+  }
+
+  .review {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .comment {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .comment__title {
+    @extend %roboto-700;
+    font-size: 22px;
+    color: $defaultDark;
+  }
+
+  .comment__title::after {
+    display: none;
+  }
+
+  .comment__input-data {
+    max-width: 370px;
+    padding: 15px 20px;
+  }
+}

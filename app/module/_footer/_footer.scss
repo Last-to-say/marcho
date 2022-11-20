@@ -1,0 +1,109 @@
+.footer {
+  color: $accentGrey;
+  @extend %quicksand-500;
+  background-color: #f6f6f6;
+
+  a {
+    color: $accentGrey;
+    @extend %quicksand-500;
+  }
+
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 35px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .logo-link {
+    margin-bottom: 30px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+  }
+
+  &__address,
+  &__email {
+    margin-bottom: 15px;
+    transition: color 0.5s;
+  }
+
+  &__address:hover,
+  &__email:hover {
+    color: $accentRed
+  }
+
+  &__phone {
+    margin-bottom: 20px;
+    transition: color 0.5s;
+  }
+
+  &__phone:hover {
+    color: $accentRed;
+  }
+
+  &__top-list {
+    max-width: 155px;
+  }
+
+  &__top-title {
+    font-size: 22px;
+    @extend %roboto-500;
+    color: $defaultDark;
+    margin-bottom: 29px;
+  }
+
+  &__top-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__top-link {
+    transition: color 0.5s;
+  }
+
+  &__top-link:hover {
+    color: $accentRed;
+  }
+
+  &__top-newslatter {
+    max-width: 475px
+  }
+
+  &__top-text {
+    margin-bottom: 30px;
+  }
+
+  &__top-input {
+    padding: 15px;
+    width: 320px;
+    border: none;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+  }
+
+  &__top-input::placeholder {
+    color: $accentGrey;
+  }
+
+  &__top-btn {
+    display: inline-block;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  &__bottom-accept {
+    display: flex;
+  }
+
+  &__bottom-text,
+  .footer__bottom-img:not(:last-child) {
+    margin-right: 20px;
+  }
+}

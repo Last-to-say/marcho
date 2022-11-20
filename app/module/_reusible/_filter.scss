@@ -1,0 +1,253 @@
+.filter-search {
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input {
+    display: inline-block;
+    width: 255px;
+    padding: 11px 15px;
+    background: $backgroungGrey;
+    border: none;
+    @extend %quicksand-500;
+    color: $accentGrey;
+  }
+
+  &__btn {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: $accentRed;
+    border: none;
+  }
+
+  &__btn::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/icons/searchWhite.svg);
+    top: 35%;
+    left: 35%;
+  }
+}
+
+.filter-price {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $accentGrey;
+    @extend %quicksand-500;
+    padding-top: 10px;
+  }
+
+  &__btn {
+    padding: 12px 20px;
+    letter-spacing: 2.5px;
+  }
+
+  .irs--flat .irs-line {
+    top: 7px;
+    height: 5px;
+    background-color: #ececec;
+    border-radius: 0px;
+  }
+
+  .irs--flat .irs-bar {
+    top: 7px;
+    height: 5px;
+    background-color: $accentRed;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    position: absolute;
+    display: block;
+    top: -10px;
+    left: 0;
+    transform: translateY(-60%);
+    width: 30px;
+    height: 30px;
+    margin-left: -1px;
+    background-color: #fff;
+    box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    display: none;
+  }
+}
+
+.filter-color {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__item:not(:first-child) {
+    padding-top: 20px;
+  }
+
+  &__input {
+    &:checked+.filter-color__checkbox {
+      background-image: url(../images/icons/checked.svg);
+      @extend %img;
+    }
+  }
+
+  &__checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__checkbox--blue {
+    background: #00aeef;
+  }
+
+  &__checkbox--red {
+    background: #f52574;
+  }
+
+  &__checkbox--green {
+    background: #24d4ac;
+  }
+
+  &__checkbox--orange {
+    background: #ff7e00;
+  }
+
+  &__checkbox--gray {
+    background: #c7c2c2;
+  }
+
+  &__checkbox--purple {
+    background: #923899;
+  }
+
+}
+
+.filter-size {
+  &__label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__label:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    &:checked+.filter-size__checkbox {
+      background-image: url(../images/icons/checkedRed.svg);
+      @extend %img;
+      background-size: contain;
+      border-color: #fe6579;
+    }
+
+    &:hover+.filter-size__checkbox {
+      border-color: #fe6579;
+    }
+
+    &:checked+.filter-size__checkbox+.filter-size__text {
+      color: #fe6579;
+    }
+
+    &:hover+.filter-size__checkbox+.filter-size__text {
+      color: #fe6579;
+    }
+  }
+
+  &__checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #959595;
+    margin-right: 15px;
+    transition: border-color 0.4s;
+  }
+
+  &__text {
+    transition: color 0.5s;
+  }
+}
+
+.filter-category {
+
+  &__label:not(:last-child) {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__input:checked+.filter-category__checkbox {
+    background: $accentRed;
+    color: #fff;
+  }
+
+  &__input:hover+.filter-category__checkbox {
+    border-color: $accentRed;
+    background: $accentRed;
+    color: #fff;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $backgroungGrey;
+    padding: 15px;
+    @extend %quicksand-500;
+    cursor: pointer;
+    transition: border-color 0.4s, background 0.4s, color 0.5s;
+  }
+
+
+}
+
+.filter-tags {
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 15px 20px 0;
+  }
+
+  &__input:checked+.filter-tags__checkbox {
+    border-color: $accentRed;
+    background: $accentRed;
+    color: #fff;
+  }
+
+  &__input:hover+.filter-tags__checkbox {
+    border-color: $accentRed;
+    background: $accentRed;
+    color: #fff;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    padding: 12px 14px;
+    border: 1px solid $accentGrey;
+    transition: border-color 0.4s, background 0.4s, color 0.5s;
+  }
+}

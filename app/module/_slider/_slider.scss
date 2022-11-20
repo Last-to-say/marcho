@@ -1,0 +1,83 @@
+.slider {
+  background-color: $backgroungGrey;
+  background-image: url(../images/slider/sliderDecoration.png);
+  @extend %img;
+  background-size: contain;
+
+  &__item-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    position: relative;
+  }
+
+  &__content {
+    align-self: center;
+    max-width: 540px;
+  }
+
+  &__title {
+    font-size: 55px;
+    margin-bottom: 15px;
+  }
+
+  &__title-span {
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    padding: 15px 45px;
+  }
+
+  &__banner {
+    width: 45%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    button {
+      font-size: 0;
+      padding: 0;
+      height: 6px;
+      width: 6px;
+      background: $accentGrey;
+      border-radius: 50%;
+    }
+
+    .slick-active {
+      button {
+        position: relative;
+        height: 30px;
+        width: 30px;
+        border: 1px solid $accentRed;
+        background: transparent;
+      }
+
+      button:after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        background: $accentRed;
+        border-radius: 50%;
+        left: 11px;
+        top: 10px;
+      }
+    }
+
+  }
+}

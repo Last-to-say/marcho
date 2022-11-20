@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    color: $accentGrey;
+    padding: 0 10px;
+  }
+
+  &__link--active {
+    color: $accentRed;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__prev,
+  .pagination__next {
+    position: relative;
+    text-transform: uppercase;
+    @extend %quicksand-500;
+    padding: 0 15px;
+    color: $accentGrey;
+  }
+
+  &__prev::before,
+  .pagination__next::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 10px;
+    @extend %img;
+  }
+
+  &__prev::before {
+    content: '';
+    background-image: url(../images/icons/angleLeft.svg);
+    left: 0;
+  }
+
+  &__next::after {
+    content: '';
+    background-image: url(../images/icons/angleRight.svg);
+    right: 0;
+  }
+}
