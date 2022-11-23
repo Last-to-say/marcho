@@ -15,9 +15,9 @@
 
   <main class="main">
     
-    {# {% include 'app/module/_slider/_slider.html' %}
+    {% include 'app/module/_slider/_slider.html' %}
 
-    {%  include 'app/module/_categories/_categories.html' %}
+    {# {%  include 'app/module/_categories/_categories.html' %}
 
     {%  include 'app/module/_promo/_promo.html' %}
 
