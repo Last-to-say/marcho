@@ -15,7 +15,7 @@
 
   <main class="main">
     
-    {% include 'app/module/_slider/_slider.html' %}
+    {# {% include 'app/module/_slider/_slider.html' %}
 
     {%  include 'app/module/_categories/_categories.html' %}
 
@@ -27,7 +27,7 @@
 
     {%  include 'app/module/_sponsors/_sponsors.html' %}
 
-    {% include 'app/module/_blogIndex/_blogIndex.html' %}
+    {% include 'app/module/_blogIndex/_blogIndex.html' %} #}
 
   </main>
   

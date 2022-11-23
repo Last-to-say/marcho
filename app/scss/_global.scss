@@ -94,3 +94,9 @@ section {
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 10px;
+  }
+}
