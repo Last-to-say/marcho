@@ -26,7 +26,8 @@ main {
 .button {
   display: block;
   padding: 15px;
-  background: $defaultDark;;
+  background: $defaultDark;
+  ;
   @extend %roboto-400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -34,7 +35,9 @@ main {
   transition: box-shadow 1s, background 0.5s;
 
 
-}.button:hover {
+}
+
+.button:hover {
   background: $accentRed;
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
@@ -96,7 +99,18 @@ section {
 }
 
 @media (max-width: 992px) {
+
+  section {
+    margin-bottom: 70px;
+  }
+
   .container {
     padding: 0 10px;
+  }
+}
+
+@media(max-width: 575px) {
+  section {
+    margin-bottom: 40px;
   }
 }
