@@ -1,7 +1,9 @@
 .benefits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
   margin-bottom: 115px;
   text-align: left;
 
@@ -10,6 +12,7 @@
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
     background: #fff;
     position: relative;
+    max-width: 370px;
   }
 
   &__item:first-child::after,
@@ -63,18 +66,19 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
     min-height: 640px;
     text-align: left;
   }
 
   &__item {
     @extend %img;
+    background-position: right;
     padding: 40px 0 0 20px;
 
     &:nth-child(1) {
       grid-row: span 2;
-      
+
       .categories__offer,
       .categories__link:hover {
         color: #c4abeb;
@@ -84,7 +88,7 @@
 
     &:nth-child(2) {
       grid-column: span 2;
-      
+
       .categories__offer {
         color: $accentRed;
       }
@@ -109,7 +113,7 @@
     }
   }
 
-  &__box{
+  &__box {
     max-width: 225px;
   }
 
@@ -140,89 +144,14 @@
 }
 
 
-@media (max-width: 992px) {
-  .benefits {
-    margin-bottom: 50px;
-    grid-template-columns: 0.7fr;
-    justify-content: center;
-    gap: 30px;
-
-    &__item {
-      padding: 40px 30px;
-    }
-  }
-
+@media (max-width: 1200px) {
   .categories {
-    text-align: center;
-    background-image: url(../images/categories/decor/shapes.png);
-    @extend %img;
-    background-size: contain;
-
-    &__text {
-      max-width: 540px;
-      margin: 0 auto 60px;
-    }
-
-    &__list {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 335px);
-      min-height: 640px;
-      text-align: left;
-    }
-
     &__item {
-      @extend %img;
-      padding: 40px 0 0 20px;
-
-      &:nth-child(1) {
-        grid-row: span 2;
-        .categories__offer,
-        .categories__link:hover {
-          color: #c4abeb;
-          border-color: #c4abeb;
-        }
-      }
-
-      &:nth-child(2) {
-        grid-column: span 2;
-        order: 2;
-        background-position: right center;
-        .categories__offer {
-          color: $accentRed;
-        }
-      }
-
-      &:nth-child(3) {
-
-        .categories__offer,
-        .categories__link:hover {
-          color: #ffb534;
-          border-color: #ffb534;
-        }
-      }
-
-      &:nth-child(4) {
-
-        .categories__offer,
-        .categories__link:hover {
-          color: #a7d9f5;
-          border-color: #a7d9f5;
-        }
-      }
+      padding: 10px 0 0 10px;
     }
-
   }
 }
 
-@media (max-width: 575px) {
-  .benefits {
-    grid-template-columns: 0.9fr;
-    gap: 20px;
+@media (max-width: 992px) {}
 
-    &__item {
-      padding: 30px 20px;
-    }
-  }
-}
+@media (max-width: 575px) {}

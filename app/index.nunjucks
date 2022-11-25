@@ -14,18 +14,18 @@
   {% include 'app/module/_header/_header.html' %}
 
   <main class="main">
-    
-    {% include 'app/module/_slider/_slider.html' %}
-
+    <!-- done-->
+    {# {% include 'app/module/_slider/_slider.html' %} #}
+    <!-- done-->
     {# {%  include 'app/module/_categories/_categories.html' %} #}
+    <!-- done-->
+    {# {%  include 'app/module/_promo/_promo.html' %}
 
-     {%  include 'app/module/_promo/_promo.html' %}
+    {%  include 'app/module/_products/_products.html' %} #}
+    <!-- done-->
+    {%  include 'app/module/_dayDeal/_dayDeal.html' %}
 
-    {%  include 'app/module/_products/_products.html' %}
-
-    {#{%  include 'app/module/_dayDeal/_dayDeal.html' %}
-
-    {%  include 'app/module/_sponsors/_sponsors.html' %}
+    {#{%  include 'app/module/_sponsors/_sponsors.html' %}
 
     {% include 'app/module/_blogIndex/_blogIndex.html' %} #}
 
