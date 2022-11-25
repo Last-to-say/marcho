@@ -17,7 +17,7 @@
   }
 
   &__title {
-    font-size: 55px;
+    font-size: 40px;
     margin-bottom: 15px;
   }
 
@@ -84,6 +84,11 @@
 
 @media (max-width: 992px) {
   .slider {
+
+    &__banner {
+      width: 52%;
+    }
+
     &__title {
       font-size: 35px;
     }
@@ -96,16 +101,27 @@
 
 @media (max-width: 675px) {
   .slider {
-    &__title {
-      font-size: 30px;
-    }
 
     &__item-inner {
       padding: 50px 0;
     }
 
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
     .slick-dots li:not(:last-child) {
       margin-right: 15px;
+    }
+
+    &__btn {
+      max-width: 330px;
+      width: 100%;
+      margin: auto;
     }
   }
 
@@ -113,5 +129,11 @@
     .slider__banner {
       display: none;
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .slider__btn {
+    max-width: 100%;
   }
 }

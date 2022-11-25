@@ -9,7 +9,8 @@
   &__variants {
     margin-bottom: 60px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(auto, 370px));
+    justify-content: center;
     gap: 50px 25px;
   }
 }
@@ -141,9 +142,8 @@
   }
 
   &__img {
-    object-fit: cover;
+    object-fit: contain;
     width: 370px;
-    height: 370px;
   }
 
   &__popup {
@@ -214,3 +214,5 @@
     margin: 0 auto 20px;
   }
 }
+
+@media (max-width: 992px) {}

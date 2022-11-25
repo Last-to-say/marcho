@@ -130,6 +130,10 @@
 @media (max-width: 992px) {
   .footer {
 
+    .slider__item-inner{
+      padding-top: 20px;
+    }
+
     &__bottom {
       justify-content: center;
       flex-direction: column;
@@ -168,7 +172,7 @@
 
     &__top-input {
       width: 100%;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
   }
