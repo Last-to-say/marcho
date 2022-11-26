@@ -12,13 +12,15 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 370px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px 30px;
     text-align: left;
   }
 
   &__item {
+    width: 370px;
     border: 1px solid #ececec;
     transition: box-shadow .3s;
   }
@@ -48,6 +50,10 @@
     .blog__item-link::after {
       background-image: url(../images/icons/arrowRed.svg);
     }
+  }
+
+  &__img-banner {
+    width: 100%;
   }
 
   &__item-content {
@@ -80,5 +86,34 @@
     background-image: url(../images/icons/arrowGray.svg);
     width: 10px;
     height: 8px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog {
+    &__item:last-child::after {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .blog {
+    &__item {
+      min-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .blog {
+    &__item {
+      min-width: 80%;
+    }
+
+    &__item-content {
+      padding: 20px 10px;
+    }
   }
 }
