@@ -24,9 +24,30 @@
     display: inline-block;
     padding: 15px 30px;
   }
+}
 
-  &__img {
-    max-width: 600px;
-    max-height: 550px;
+@media (max-width: 1200px) {
+  .error {
+    &__inner {
+      padding-top: 0;
+      flex-flow: column-reverse;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 660px;
+    }
+
+    &__text {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      margin-bottom: 20px;
+    }
   }
 }
