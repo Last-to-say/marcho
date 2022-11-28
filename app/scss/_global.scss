@@ -27,7 +27,6 @@ main {
   display: block;
   padding: 15px;
   background: $defaultDark;
-  ;
   @extend %roboto-400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -98,7 +97,7 @@ section {
   position: absolute;
 }
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
 
   section {
     margin-bottom: 70px;
@@ -114,6 +113,7 @@ section {
 }
 
 @media(max-width: 575px) {
+
   section {
     margin-bottom: 50px;
   }
