@@ -10,8 +10,26 @@
 
   &__title {
     @extend %roboto-400;
-    text-transform: uppercase;
-    font-size: 48px;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-navigation {
+    margin: 0 auto 60px;
+
+    &__inner {
+      padding: 90px 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .page-navigation {
+    margin: 0 auto 50px;
+
+    &__inner {
+      padding: 70px 0;
+    }
   }
 }

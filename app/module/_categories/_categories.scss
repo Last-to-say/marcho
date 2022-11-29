@@ -32,8 +32,8 @@
 
   &__item:last-child::before {
     position: absolute;
-    bottom: -15px;
-    right: -15px;
+    bottom: -10px;
+    right: -10px;
     background-image: url(../images/categories/decor/triangle.png);
     width: 65px;
     height: 52px;
@@ -66,7 +66,6 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(2, 1fr);
     min-height: 640px;
     text-align: left;
   }
@@ -152,6 +151,41 @@
   }
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+  .categories {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-@media (max-width: 575px) {}
+    &__item {
+      min-height: 300px;
+      background-position: top center;
+
+      &:nth-child(2) {
+        order: 1;
+        background-position: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .categories {
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      min-height: 250px;
+
+      &:nth-child(1) {
+        background-position: right 15%;
+      }
+
+      &:nth-child(2) {
+        background-position: 77%;
+      }
+    }
+  }
+}
