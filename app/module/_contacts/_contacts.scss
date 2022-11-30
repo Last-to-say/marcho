@@ -139,6 +139,17 @@
 }
 
 @media (max-width: 575px) {
+  .contacts {
+    &__info{
+      max-width: 100%;
+    }
+
+    &__item {
+      min-height: 50px;
+      padding-left: 75px;
+    }
+  }
+
   .contacts-form {
     padding: 25px 10px;
   }
